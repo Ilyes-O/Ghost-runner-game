@@ -4,6 +4,7 @@ var climberImg, climber, climbersGroup;
 var ghost, ghostImg;
 var invisibleBlockGroup, invisibleBlock;
 var gameState = "play";
+var spookySound;
 
 
 function preload() {
@@ -25,7 +26,8 @@ function setup() {
   ghost = createSprite(300, 500);
   ghost.addImage(ghostImg);
   ghost.scale = .3
-
+  
+  spookySound.loop();
 
   doorsGroup = new Group();
   climbersGroup = new Group();
